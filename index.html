@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="textAnimation.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Word Finding App</title>
+</head>
+<body>
+    <div class="navigation">
+        <span class="icon"><a href="/https://melodic-conkies-5b45ef.netlify.app/"><ion-icon name="chevron-back-circle"></ion-icon></a></span>
+        <div class="logo"><a href="https://melodic-conkies-5b45ef.netlify.app/"><img src="/images/logo.svg" alt=""></a></div>
+    </div>
+    <section class="wraper">
+      
+        <div class="left">
+            <h2>Word Finding APP</h2>
+            <h3>Instructions:</h3>
+            <ul class="instructionList">
+                <li>In First step You pick a word in your Mind and enter the length of it.</li>
+                <li>In Second step you will be prompt with 2d display of letters based on which you have to enter the column number that the letters of your word fall in, one by one.</li>
+                <li>In third step the second step will be repeated.</li>
+                <li>Finally you need to click the find Button and the app will find the word you picked.</li>
+            </ul>
+            <img src="/images/left.jpg" alt="">
+        </div>
+        <div class="rightWrap">
+            <button class="btn restart hidden">Restart</button>
+        <div class="right1">
+            <h2>Enter length of your word</h2>
+            <div class="wrap">
+                <input class="in inpt3" type="text" min="3" max="8" placeholder="eg:5 (max-size of 8)">
+                <button class="btn open">SUBMITE</button>
+            </div>
+        </div>
+        <div class="right2 hidden">
+            <div class="letterContainer hidden">
+            </div>
+            <div class="inputContain">
+                <label class="lab labl">First letter Column</label>
+                <div class="container">
+                    <button id="decrement" onclick="stepper(this)"> - </button>
+                    <input type="number" min="0" max="10" step="1" value="1" id="my-input">
+                    <button id="increment" onclick="stepper(this)"> + </button>
+                </div>
+                <button class="btn submite">SUBMITE</button>
+            </div>
+        </div>
+        <div class="right3 hidden">
+            <div class="letterContainer2">
+            </div>
+            <div class="inputContain1">
+                <label class="lab labl1">First letter Column</label>
+                   <div class="container">
+                        <button id="decrement" onclick="stepper1(this)"> - </button>
+                        <input type="number" min="0" max="10" step="1" value="1" id="my-input1">
+                        <button id="increment" onclick="stepper1(this)"> + </button>
+                    </div>
+                <button class="btn submite1">SUBMITE</button>
+            </div>
+                <button class="find btn hidden"> FIND</button>
+        </div>
+        <div class="right4 hidden">
+            <h1 class="word"></h1> 
+        </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
